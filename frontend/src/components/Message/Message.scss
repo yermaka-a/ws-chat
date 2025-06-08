@@ -1,0 +1,50 @@
+
+$message-bg-user: #daf1ff;
+$message-bg-other: #f1f0f0;
+$message-color: #333;
+$message-radius: 16px;
+$message-padding: 12px 20px;
+$message-margin: 8px 0;
+$message-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$message-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+.message {
+  max-width: 70%;
+  padding: $message-padding;
+  margin: $message-margin;
+  border-radius: $message-radius;
+  font-family: $message-font-family;
+  color: $message-color;
+  box-shadow: $message-shadow;
+  word-wrap: break-word;
+
+  &.user {
+    background-color: $message-bg-user;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  &.other {
+    background-color: $message-bg-other;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .author {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    opacity: 0.7;
+  }
+
+  .text {
+    font-size: 1rem;
+    white-space: pre-wrap;
+  }
+
+  .time {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    margin-top: 6px;
+  }
+}
