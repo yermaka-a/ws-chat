@@ -3,7 +3,6 @@ package websocket
 import (
 	"fmt"
 	"log"
-	"sync"
 
 	"github.com/gorilla/websocket"
 )
@@ -12,7 +11,6 @@ type Client struct {
 	ID   string
 	Conn *websocket.Conn
 	Pool *Pool
-	mu   sync.Mutex
 }
 
 type Message struct {
@@ -22,7 +20,8 @@ type Message struct {
 
 func (c *Client) Read() {
 	defer func() {
-		c.Read()
+		c.Pool.Unregister <- c
+		c.Conn.Close()
 	}()
 
 	for {
