@@ -1,0 +1,39 @@
+
+$input-border-color: #ccc;
+$input-focus-border-color: #0A84FF;
+$input-background-color: #fff;
+$input-placeholder-color: #aaa;
+
+.input-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 800px;
+  input {
+  
+    width: 96%;
+    padding: 12px 2%;
+    border: 2px solid $input-border-color;
+    border-radius: 8px;
+    background-color: $input-background-color;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $input-focus-border-color;
+      box-shadow: 0 0 5px rgba(10, 132, 255, 0.5);
+    }
+
+    &::placeholder {
+      color: $input-placeholder-color;
+      opacity: 1; 
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
