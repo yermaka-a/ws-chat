@@ -1,0 +1,47 @@
+
+$footer-background: linear-gradient(90deg, #0A84FF 0%, #0062E0 100%);
+$footer-color: #fff;
+$footer-padding: 20px 40px;
+$footer-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$footer-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+$link-color: #fff;
+$link-hover-color: #a0c4ff;
+
+.footer {
+  background: $footer-background;
+  color: $footer-color;
+  padding: $footer-padding;
+  text-align: center;
+  font-family: $footer-font-family;
+  box-shadow: $footer-shadow;
+  margin-top: auto;
+
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    .links {
+      margin-bottom: 10px;
+
+      a {
+        color: $link-color;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+
+    small {
+      opacity: 0.7;
+    }
+  }
+}
