@@ -1,0 +1,1 @@
+export const InputSuggestion = "Введите сообщение..."

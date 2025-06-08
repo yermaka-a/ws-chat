@@ -1,0 +1,1 @@
+export const SocketUrl = "ws://localhost:5000/ws"
