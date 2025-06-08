@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/yermaka-a/ws-chat/backend/pkg/websocket"
+	"github.com/yermaka-a/golang-chat/pkg/websocket"
 )
 
 func serveWS(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
